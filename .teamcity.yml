@@ -1,0 +1,18 @@
+name: Bolt Shadcn Hvhydw
+jobs:
+  Job1:
+    name: Job 1
+    steps:
+      - type: gradle
+        name: stage
+        working-directory: /root
+        tasks: smooth build
+        jdk-home: '%env.JDK_17_0_x64%'
+        enable-stacktrace: 'true'
+        enable-debug: 'true'
+    runs-on: Linux-Medium
+    integrations:
+      - NPM
+      - bolt
+      - null
+    enable-dependency-cache: true
